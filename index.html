@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Simple calculator</title>
+</head>
+<link rel="stylesheet" href="main.css">
+<script src="main.js"></script>
+<body>
+<form name="sci-calc">
+<table class="calculator" cellspacing="0" cellpadding="1">
+<tr>
+<td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td>
+</tr>
+<tr>
+<td><input type="button" class="btnTop" name="btnTop" value="C" onclick="this.form.display.value= 0 "></td>
+<td><input type="button" class="btnTop" name="btnTop" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="%" onclick=" percent(this.form.display)"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="/" onclick="addChar(this.form.display, '/')"></td>
+</tr>
+<td><input type="button" class="btnMath" name="btnMath" value="*" onclick="addChar(this.form.display, '*')"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="-" onclick="addChar(this.form.display, '-')"></td>
+<td><input type="button" class="btnOpps" name="btnOpps" value="x&#50;" onclick="if(checkNum(this.form.display.value)) { square(this.form) }"></td>
+<td><input type="button" class="btnMath" name="btnMath" value="+" onclick="addChar(this.form.display, '+')"></td>
+</tabel>
+</form>
+</body>
+</html>
